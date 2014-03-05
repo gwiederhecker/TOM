@@ -1,0 +1,85 @@
+\documentclass{beamer}
+%----------------------------------------
+%            PACKAGES
+%----------------------------------------
+
+%--FIGURES
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+%--FONT
+%upright mu - \textmu
+\usepackage{textcomp} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[bold]{hhtensor}
+
+\usepackage{array}
+\usepackage[table]{xcolor}
+
+%--HYPERLINKS
+%\hypersetup{colorlinks=true,       % false: boxed links; true: colored links
+%	linkcolor=OliveGreen,          % color of internal links
+%	citecolor=BrickRed,        % color of links to bibliography
+%	urlcolor=Blue,
+%	bookmarksnumbered=true,
+%	pdffitwindow=true, 
+%	bookmarks=true}         % show
+\usepackage{url}
+
+%--BEAMER THEME
+\usetheme{Warsaw}
+
+%--Title slide configuration
+\input{title_slide}
+
+
+
+%--BEGIN DOCUMENT HERE!
+\begin{document}    
+
+
+% Typing shortcuts
+\input{shortcuts}
+% Shortcut fot tables and figures.
+\def\figurename{Fig.}
+\def\tablename{Tab.}
+
+
+%----------------------------------------
+%-- SLIDES BEGIN HERE!!
+%----------------------------------------
+
+% Title slide
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\AtBeginSection[]
+{
+\begin{frame}<beamer>{Table of Contents}
+\tableofcontents[currentsection,currentsubsection, 
+    hideothersubsections, 
+    sectionstyle=show/shaded,
+]
+\end{frame}
+}
+
+% Maxwell Equations
+\section{Maxwell Equations}
+\input{maxwell_equations}
+
+% Perturbation Theory
+\section{Perturbation Theory}
+\input{perturbation_theory}
+
+%Bilbiography
+\begin{frame}{Bibliography}
+	\bibliographystyle{plain}
+	\bibliography{references}
+\end{frame}
+
+
+
+\end{document}
+
